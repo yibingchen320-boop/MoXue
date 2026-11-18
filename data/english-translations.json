@@ -1,0 +1,102 @@
+[
+  {
+    "cn": "我习惯每天早上六点起床。",
+    "hint": "be used to doing",
+    "answer": "I am used to getting up at six every morning.",
+    "points": [
+      {"key":"be used to doing","desc":"习惯做某事"},
+      {"key":"getting up","desc":"动名词形式"},
+      {"key":"every morning","desc":"时间状语"}
+    ]
+  },
+  {
+    "cn": "这本书值得一读。",
+    "hint": "be worth doing",
+    "answer": "This book is worth reading.",
+    "points": [
+      {"key":"be worth doing","desc":"值得做某事"},
+      {"key":"reading","desc":"动名词形式"},
+      {"key":"this book","desc":"主语"}
+    ]
+  },
+  {
+    "cn": "他花了两个小时完成作业。",
+    "hint": "spend time doing / It takes...",
+    "answer": "He spent two hours finishing his homework. / It took him two hours to finish his homework.",
+    "points": [
+      {"key":"spend + time + doing / It takes sb time to do","desc":"花费句型"},
+      {"key":"finishing / to finish","desc":"完成作业的动词形式"},
+      {"key":"two hours","desc":"时间表达"}
+    ]
+  },
+  {
+    "cn": "比起看电视，我更喜欢看书。",
+    "hint": "prefer doing to doing",
+    "answer": "I prefer reading to watching TV.",
+    "points": [
+      {"key":"prefer doing to doing","desc":"比起……更喜欢……"},
+      {"key":"reading / watching","desc":"动名词形式"},
+      {"key":"TV","desc":"看电视表达"}
+    ]
+  },
+  {
+    "cn": "全世界都说英语。",
+    "hint": "被动语态",
+    "answer": "English is spoken all over the world.",
+    "points": [
+      {"key":"is spoken","desc":"被动语态（一般现在时）"},
+      {"key":"all over the world","desc":"全世界"},
+      {"key":"English","desc":"主语"}
+    ]
+  },
+  {
+    "cn": "我期待收到你的来信。",
+    "hint": "look forward to doing",
+    "answer": "I look forward to hearing from you.",
+    "points": [
+      {"key":"look forward to doing","desc":"期待做某事"},
+      {"key":"hearing from you","desc":"收到来信"},
+      {"key":"I","desc":"主语"}
+    ]
+  },
+  {
+    "cn": "不要放弃尝试。",
+    "hint": "give up doing",
+    "answer": "Don't give up trying.",
+    "points": [
+      {"key":"give up doing","desc":"放弃做某事"},
+      {"key":"trying","desc":"动名词形式"},
+      {"key":"Don't","desc":"否定祈使句"}
+    ]
+  },
+  {
+    "cn": "这座桥建于1990年。",
+    "hint": "被动语态",
+    "answer": "The bridge was built in 1990.",
+    "points": [
+      {"key":"was built","desc":"被动语态（一般过去时）"},
+      {"key":"in 1990","desc":"时间状语"},
+      {"key":"the bridge","desc":"主语"}
+    ]
+  },
+  {
+    "cn": "他忍不住笑了。",
+    "hint": "can't help doing",
+    "answer": "He couldn't help laughing.",
+    "points": [
+      {"key":"can't/couldn't help doing","desc":"忍不住做某事"},
+      {"key":"laughing","desc":"动名词形式"},
+      {"key":"时态","desc":"用过去时 couldn't"}
+    ]
+  },
+  {
+    "cn": "老师让我们在课堂上说英语。",
+    "hint": "make sb do",
+    "answer": "The teacher makes us speak English in class.",
+    "points": [
+      {"key":"make sb do","desc":"使某人做（省略to）"},
+      {"key":"speak English","desc":"说英语"},
+      {"key":"in class","desc":"在课堂上"}
+    ]
+  }
+]

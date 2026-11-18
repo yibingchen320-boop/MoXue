@@ -1,0 +1,305 @@
+/* === 墨水屏设计系统 === */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+  --ink: #2b2b2b;
+  --ink-light: #555;
+  --ink-faded: #888;
+  --paper: #e8e6df;
+  --paper-light: #f0eee7;
+  --paper-dark: #d8d5cc;
+  --line: #c8c5bc;
+  --highlight: #3a3a3a;
+  --accent: #5a5a5a;
+  --correct: #4a7c4e;
+  --wrong: #8b3a3a;
+  --shadow: rgba(0,0,0,0.06);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+
+body {
+  background: var(--paper);
+  font-family: 'Noto Sans SC', sans-serif;
+  color: var(--ink);
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(0,0,0,0.015) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(0,0,0,0.015) 0%, transparent 50%);
+}
+
+body::before {
+  content:'';
+  position:fixed; top:0; left:0; right:0; bottom:0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9' /%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23n)' opacity='0.02'/%3E%3C/svg%3E");
+  pointer-events:none; z-index:1;
+}
+
+#app { position:relative; z-index:2; max-width:520px; margin:0 auto; min-height:100vh; }
+
+/* === 顶部状态栏 === */
+.header {
+  position:sticky; top:0; z-index:100;
+  background: var(--paper-light);
+  border-bottom: 1px solid var(--line);
+  padding: 12px 20px 10px;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.header .title {
+  font-family:'Noto Serif SC', serif;
+  font-size:18px; font-weight:700; color:var(--ink);
+  letter-spacing:2px;
+}
+.header .streak {
+  font-size:13px; color:var(--ink-faded);
+  display:flex; align-items:center; gap:4px;
+}
+.header .streak .flame { font-size:15px; }
+
+/* === 主页 === */
+.home { padding: 20px 16px 80px; }
+.welcome {
+  font-family:'Noto Serif SC', serif;
+  font-size:22px; font-weight:500;
+  text-align:center; margin: 20px 0 8px;
+  color:var(--ink);
+}
+.welcome-sub {
+  font-size:13px; color:var(--ink-faded);
+  text-align:center; margin-bottom:24px;
+}
+
+/* 进度卡片 */
+.progress-card {
+  background: var(--paper-light);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+.progress-row { display:flex; gap:12px; margin-bottom:10px; }
+.progress-item { flex:1; text-align:center; }
+.progress-item .num {
+  font-family:'Crimson Pro', serif;
+  font-size:24px; font-weight:600; color:var(--ink);
+}
+.progress-item .label { font-size:11px; color:var(--ink-faded); margin-top:2px; }
+.progress-bar { height:4px; background:var(--paper-dark); border-radius:2px; overflow:hidden; }
+.progress-bar .fill { height:100%; background:var(--ink); border-radius:2px; transition: width 0.5s ease; }
+
+/* 科目选择 */
+.subject-tabs { display:flex; gap:0; margin-bottom:16px; border-bottom: 2px solid var(--line); }
+.subject-tab {
+  flex:1; padding:10px 0; text-align:center;
+  font-family:'Noto Serif SC', serif;
+  font-size:15px; font-weight:500;
+  color:var(--ink-faded);
+  border-bottom: 2px solid transparent;
+  margin-bottom:-2px;
+  cursor:pointer; transition: all 0.2s;
+}
+.subject-tab.active { color:var(--ink); border-bottom-color:var(--ink); }
+
+/* 模块卡片 */
+.module-list { display:flex; flex-direction:column; gap:12px; }
+.module-card {
+  background: var(--paper-light);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px 18px;
+  cursor:pointer; transition: all 0.2s;
+  display:flex; align-items:center; gap:14px;
+}
+.module-card:active { background:var(--paper-dark); transform:scale(0.98); }
+.module-card .icon {
+  width:42px; height:42px; flex-shrink:0;
+  border:1.5px solid var(--ink); border-radius:8px;
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Noto Serif SC', serif;
+  font-size:20px; font-weight:700;
+}
+.module-card .info { flex:1; }
+.module-card .info .name { font-size:15px; font-weight:500; color:var(--ink); margin-bottom:2px; }
+.module-card .info .desc { font-size:12px; color:var(--ink-faded); line-height:1.4; }
+.module-card .arrow { color:var(--ink-faded); font-size:18px; }
+
+/* === 通用页面 === */
+.page { padding: 16px 16px 80px; display:none; }
+.page.active { display:block; }
+.page-title {
+  font-family:'Noto Serif SC', serif;
+  font-size:20px; font-weight:700;
+  margin-bottom:4px; padding:0 4px;
+}
+.page-desc { font-size:13px; color:var(--ink-faded); margin-bottom:16px; padding:0 4px; }
+.back-btn {
+  display:inline-flex; align-items:center; gap:4px;
+  font-size:14px; color:var(--ink-light);
+  margin-bottom:12px; cursor:pointer;
+}
+.back-btn:active { color:var(--ink); }
+
+/* === 语文·易错字词 === */
+.word-entry {
+  background:var(--paper-light);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:14px 16px;
+  margin-bottom:10px;
+}
+.word-entry .word {
+  font-family:'Noto Serif SC', serif;
+  font-size:18px; font-weight:700;
+  display:flex; align-items:center; gap:8px;
+  margin-bottom:6px;
+}
+.word-entry .word .pinyin { font-family:'Crimson Pro', serif; font-size:14px; color:var(--ink-faded); font-weight:400; }
+.word-entry .word .tag { font-size:10px; padding:1px 6px; border-radius:3px; background:var(--paper-dark); color:var(--ink-light); font-weight:400; }
+.word-entry .explain { font-size:13px; color:var(--ink-light); line-height:1.6; }
+.word-entry .wrong-example { font-size:12px; color:var(--wrong); margin-top:4px; }
+.word-entry .wrong-example .correct { color:var(--correct); }
+
+.filter-tabs { display:flex; gap:6px; margin-bottom:14px; flex-wrap:wrap; }
+.filter-tab {
+  padding:4px 12px; font-size:12px;
+  border:1px solid var(--line); border-radius:14px;
+  color:var(--ink-faded); cursor:pointer;
+  background:var(--paper-light);
+}
+.filter-tab.active { background:var(--ink); color:var(--paper); border-color:var(--ink); }
+
+/* === 文言文卡片 === */
+.classical-card {
+  background:var(--paper-light);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:16px 18px;
+  margin-bottom:12px;
+}
+.classical-card .ctitle { font-family:'Noto Serif SC', serif; font-size:16px; font-weight:700; margin-bottom:4px; }
+.classical-card .author { font-size:12px; color:var(--ink-faded); margin-bottom:10px; }
+.classical-card .original { font-family:'Noto Serif SC', serif; font-size:14px; line-height:2; color:var(--ink); margin-bottom:10px; white-space:pre-wrap; }
+.classical-card .translation { font-size:13px; line-height:1.7; color:var(--ink-light); border-top:1px dashed var(--line); padding-top:8px; }
+.classical-card .key-points { margin-top:10px; padding-top:8px; border-top:1px dashed var(--line); }
+.classical-card .key-points .kp-title { font-size:12px; font-weight:600; color:var(--ink); margin-bottom:4px; }
+.classical-card .key-points .kp-item { font-size:12px; color:var(--ink-light); line-height:1.6; padding-left:12px; position:relative; }
+.classical-card .key-points .kp-item::before { content:'\00B7'; position:absolute; left:2px; }
+
+/* === 作文素材 === */
+.essay-card { background:var(--paper-light); border:1px solid var(--line); border-radius:8px; padding:16px; margin-bottom:12px; }
+.essay-card .category { font-size:11px; color:var(--ink-faded); border:1px solid var(--line); padding:1px 8px; border-radius:10px; display:inline-block; margin-bottom:8px; }
+.essay-card .quote { font-family:'Noto Serif SC', serif; font-size:15px; line-height:1.8; color:var(--ink); margin-bottom:6px; }
+.essay-card .source { font-size:12px; color:var(--ink-faded); margin-bottom:8px; }
+.essay-card .usage { font-size:12px; color:var(--ink-light); line-height:1.6; border-top:1px dashed var(--line); padding-top:6px; }
+
+/* === 英语·单词列表 === */
+.word-list-item { background:var(--paper-light); border:1px solid var(--line); border-radius:8px; padding:14px 16px; margin-bottom:10px; }
+.word-list-item .en-word { font-family:'Crimson Pro', serif; font-size:18px; font-weight:600; color:var(--ink); display:flex; align-items:center; gap:8px; margin-bottom:2px; }
+.word-list-item .phonetic { font-family:'Crimson Pro', serif; font-size:13px; color:var(--ink-faded); margin-bottom:6px; }
+.word-list-item .cn-meaning { font-size:13px; color:var(--ink); margin-bottom:6px; }
+.word-list-item .collocations { font-size:12px; color:var(--ink-light); line-height:1.6; margin-bottom:4px; }
+.word-list-item .collocations .label { font-weight:600; color:var(--ink); }
+.word-list-item .example { font-family:'Crimson Pro', serif; font-size:12px; color:var(--ink-light); font-style:italic; line-height:1.5; margin-bottom:4px; }
+.word-list-item .related { font-size:12px; color:var(--accent); line-height:1.6; padding-top:6px; border-top:1px dashed var(--line); }
+.word-list-item .related .rel-word { display:inline-block; border:1px solid var(--line); padding:1px 6px; border-radius:3px; margin:2px 4px 2px 0; font-size:11px; }
+.word-list-item .related .arrow-icon { font-size:10px; color:var(--ink-faded); }
+
+/* === 时态语态 === */
+.tense-card { background:var(--paper-light); border:1px solid var(--line); border-radius:8px; padding:16px; margin-bottom:12px; }
+.tense-card .tense-name { font-family:'Noto Serif SC', serif; font-size:16px; font-weight:700; margin-bottom:4px; }
+.tense-card .tense-en { font-family:'Crimson Pro', serif; font-size:13px; color:var(--ink-faded); margin-bottom:10px; }
+.tense-card .structure { font-family:'Crimson Pro', serif; font-size:14px; color:var(--ink); background:var(--paper-dark); border-radius:6px; padding:8px 12px; margin-bottom:8px; }
+.tense-card .usage-list { font-size:13px; color:var(--ink-light); line-height:1.7; }
+.tense-card .usage-list .li { padding-left:12px; position:relative; }
+.tense-card .usage-list .li::before { content:'\00B7'; position:absolute; left:2px; }
+.tense-card .examples { margin-top:8px; padding-top:8px; border-top:1px dashed var(--line); }
+.tense-card .examples .ex { font-family:'Crimson Pro', serif; font-size:13px; color:var(--ink); margin-bottom:3px; }
+.tense-card .examples .ex-cn { font-size:12px; color:var(--ink-faded); }
+
+/* === 固定搭配 === */
+.collocation-item { background:var(--paper-light); border:1px solid var(--line); border-radius:8px; padding:12px 16px; margin-bottom:8px; }
+.collocation-item .phrase { font-family:'Crimson Pro', serif; font-size:16px; font-weight:600; color:var(--ink); margin-bottom:2px; }
+.collocation-item .meaning { font-size:13px; color:var(--ink-light); margin-bottom:4px; }
+.collocation-item .ex-sentence { font-family:'Crimson Pro', serif; font-size:12px; color:var(--ink-faded); font-style:italic; }
+
+/* === 听写卡片 === */
+.dictation-intro { background:var(--paper-light); border:1px solid var(--line); border-radius:8px; padding:20px; text-align:center; margin-bottom:16px; }
+.dictation-intro .big-icon { font-family:'Noto Serif SC', serif; font-size:36px; margin-bottom:8px; }
+.dictation-intro .d-title { font-family:'Noto Serif SC', serif; font-size:18px; font-weight:700; margin-bottom:4px; }
+.dictation-intro .d-desc { font-size:13px; color:var(--ink-faded); margin-bottom:16px; }
+.dictation-intro .stats { display:flex; justify-content:center; gap:20px; margin-bottom:16px; }
+.dictation-intro .stats .stat .num { font-family:'Crimson Pro', serif; font-size:20px; font-weight:600; }
+.dictation-intro .stats .stat .label { font-size:11px; color:var(--ink-faded); }
+
+/* 按钮 */
+.btn { display:block; width:100%; padding:12px; font-family:'Noto Sans SC', sans-serif; font-size:15px; font-weight:500; border:none; border-radius:8px; cursor:pointer; transition: all 0.2s; }
+.btn-primary { background:var(--ink); color:var(--paper); }
+.btn-primary:active { background:var(--highlight); transform:scale(0.98); }
+.btn-secondary { background:var(--paper-light); color:var(--ink); border:1px solid var(--line); }
+.btn-secondary:active { background:var(--paper-dark); }
+.btn-row { display:flex; gap:10px; }
+
+/* 听写进行中 */
+.dict-session { display:none; }
+.dict-session.active { display:block; }
+.dict-progress { display:flex; align-items:center; gap:8px; margin-bottom:16px; }
+.dict-progress .bar { flex:1; height:3px; background:var(--paper-dark); border-radius:2px; overflow:hidden; }
+.dict-progress .bar .fill { height:100%; background:var(--ink); transition:width 0.3s; }
+.dict-progress .count { font-size:13px; color:var(--ink-faded); font-family:'Crimson Pro', serif; }
+
+.dict-question { background:var(--paper-light); border:1px solid var(--line); border-radius:8px; padding:24px 20px; text-align:center; margin-bottom:16px; min-height:140px; display:flex; flex-direction:column; justify-content:center; }
+.dict-question .q-type { font-size:11px; color:var(--ink-faded); margin-bottom:8px; }
+.dict-question .q-content { font-family:'Crimson Pro', serif; font-size:22px; font-weight:600; color:var(--ink); margin-bottom:8px; }
+.dict-question .q-hint { font-size:13px; color:var(--ink-faded); }
+.dict-question .q-cn { font-family:'Noto Serif SC', serif; font-size:16px; color:var(--ink); margin-bottom:6px; }
+
+.dict-input { width:100%; padding:12px 16px; font-family:'Crimson Pro', serif; font-size:16px; border:1px solid var(--line); border-radius:8px; background:var(--paper); color:var(--ink); outline:none; margin-bottom:12px; }
+.dict-input:focus { border-color:var(--ink); }
+
+.dict-result { display:none; border-radius:8px; padding:14px 16px; margin-bottom:12px; font-size:14px; line-height:1.6; }
+.dict-result.show { display:block; }
+.dict-result.correct { background:rgba(74,124,78,0.1); border:1px solid var(--correct); color:var(--correct); }
+.dict-result.wrong { background:rgba(139,58,58,0.08); border:1px solid var(--wrong); color:var(--wrong); }
+.dict-result .answer-label { font-weight:600; }
+.dict-result .answer-text { font-family:'Crimson Pro', serif; color:var(--ink); margin-top:4px; }
+.dict-result .scoring { margin-top:6px; padding-top:6px; border-top:1px dashed; font-size:12px; }
+.dict-result .scoring .point { display:flex; align-items:center; gap:4px; margin-bottom:2px; }
+.dict-result .scoring .point .check { font-size:14px; }
+
+/* === 底部导航 === */
+.bottom-nav { position:fixed; bottom:0; left:50%; transform:translateX(-50%); width:100%; max-width:520px; background:var(--paper-light); border-top:1px solid var(--line); display:flex; z-index:100; }
+.nav-item { flex:1; padding:10px 0 8px; text-align:center; cursor:pointer; transition:all 0.2s; }
+.nav-item .nav-icon { font-family:'Noto Serif SC', serif; font-size:20px; display:block; margin-bottom:2px; color:var(--ink-faded); }
+.nav-item .nav-label { font-size:10px; color:var(--ink-faded); }
+.nav-item.active .nav-icon, .nav-item.active .nav-label { color:var(--ink); }
+
+/* === 错题本 === */
+.error-book-empty { text-align:center; padding:40px 20px; color:var(--ink-faded); font-size:14px; }
+.error-item { background:var(--paper-light); border:1px solid var(--line); border-left:3px solid var(--wrong); border-radius:6px; padding:12px 16px; margin-bottom:8px; display:flex; align-items:flex-start; gap:10px; }
+.error-item .e-type { font-size:10px; color:var(--ink-faded); border:1px solid var(--line); padding:1px 6px; border-radius:3px; flex-shrink:0; }
+.error-item .e-content { flex:1; }
+.error-item .e-q { font-family:'Crimson Pro', serif; font-size:14px; color:var(--ink); margin-bottom:2px; }
+.error-item .e-a { font-family:'Crimson Pro', serif; font-size:13px; color:var(--correct); }
+.error-item .e-date { font-size:11px; color:var(--ink-faded); }
+.error-item .e-del { font-size:16px; color:var(--ink-faded); cursor:pointer; flex-shrink:0; padding:0 4px; }
+
+/* 动画 */
+@keyframes fadeIn { from{opacity:0;transform:translateY(8px);} to{opacity:1;transform:translateY(0);} }
+.fade-in { animation: fadeIn 0.3s ease; }
+@keyframes inkSpread { from{opacity:0;} to{opacity:1;} }
+.ink-spread { animation: inkSpread 0.4s ease; }
+
+/* 翻译句子听写 */
+.translation-card { background:var(--paper-light); border:1px solid var(--line); border-radius:8px; padding:18px 16px; margin-bottom:12px; }
+.translation-card .cn-sentence { font-family:'Noto Serif SC', serif; font-size:16px; line-height:1.8; color:var(--ink); margin-bottom:6px; }
+.translation-card .hint { font-size:12px; color:var(--ink-faded); margin-bottom:10px; }
+.translation-card .score-points { margin-top:8px; padding-top:8px; border-top:1px dashed var(--line); }
+.translation-card .score-points .sp-title { font-size:12px; font-weight:600; margin-bottom:4px; }
+.translation-card .score-points .sp-item { font-size:12px; display:flex; align-items:center; gap:6px; margin-bottom:2px; }
+.translation-card .score-points .sp-check { font-size:14px; }
+.translation-card .score-points .sp-check.yes { color:var(--correct); }
+.translation-card .score-points .sp-check.no { color:var(--wrong); }
+
+.spacer-12 { height:12px; }
+.spacer-20 { height:20px; }

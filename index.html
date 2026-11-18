@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>墨学 · 中考备考</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+
+<!-- ====== 顶部 ====== -->
+<div class="header">
+  <div class="title">墨学</div>
+  <div class="streak"><span class="flame">&#128293;</span><span id="streakDays">0</span>天</div>
+</div>
+
+<!-- ====== 首页 ====== -->
+<div class="page active" id="page-home">
+  <div class="home">
+    <div class="welcome">加油，中考冲刺</div>
+    <div class="welcome-sub">温州 · 2027届 · 语文 & 英语</div>
+
+    <div class="progress-card">
+      <div class="progress-row">
+        <div class="progress-item">
+          <div class="num" id="totalWords">0</div>
+          <div class="label">已学单词</div>
+        </div>
+        <div class="progress-item">
+          <div class="num" id="totalDictations">0</div>
+          <div class="label">听写次数</div>
+        </div>
+        <div class="progress-item">
+          <div class="num" id="totalErrors">0</div>
+          <div class="label">错题数</div>
+        </div>
+      </div>
+      <div class="progress-bar"><div class="fill" id="progressFill" style="width:0%"></div></div>
+    </div>
+
+    <div class="subject-tabs">
+      <div class="subject-tab active" data-subject="chinese" onclick="switchSubject('chinese')">语文</div>
+      <div class="subject-tab" data-subject="english" onclick="switchSubject('english')">英语</div>
+    </div>
+
+    <!-- 语文模块 -->
+    <div id="modules-chinese" class="module-list">
+      <div class="module-card" onclick="goTo('page-ezwords')">
+        <div class="icon">字</div>
+        <div class="info"><div class="name">易错字词</div><div class="desc">字音·字形·成语辨析（浙江真题高频）</div></div>
+        <div class="arrow">&#8250;</div>
+      </div>
+      <div class="module-card" onclick="goTo('page-classical')">
+        <div class="icon">文</div>
+        <div class="info"><div class="name">文言文</div><div class="desc">课内必背篇目 · 注释 · 翻译</div></div>
+        <div class="arrow">&#8250;</div>
+      </div>
+      <div class="module-card" onclick="goTo('page-essay')">
+        <div class="icon">材</div>
+        <div class="info"><div class="name">作文素材积累</div><div class="desc">名言金句 · 典故 · 适用主题</div></div>
+        <div class="arrow">&#8250;</div>
+      </div>
+      <div class="module-card" onclick="goTo('page-reading')">
+        <div class="icon">阅</div>
+        <div class="info"><div class="name">阅读理解技巧</div><div class="desc">记叙文·说明文·议论文答题模板</div></div>
+        <div class="arrow">&#8250;</div>
+      </div>
+    </div>
+
+    <!-- 英语模块 -->
+    <div id="modules-english" class="module-list" style="display:none">
+      <div class="module-card" onclick="goTo('page-wordlist')">
+        <div class="icon">A</div>
+        <div class="info"><div class="name">单词列表</div><div class="desc">释义·音标·搭配·例句·关联词</div></div>
+        <div class="arrow">&#8250;</div>
+      </div>
+      <div class="module-card" onclick="goTo('page-tense')">
+        <div class="icon">T</div>
+        <div class="info"><div class="name">时态语态</div><div class="desc">八大时态结构·用法·例句分析</div></div>
+        <div class="arrow">&#8250;</div>
+      </div>
+      <div class="module-card" onclick="goTo('page-collocation')">
+        <div class="icon">P</div>
+        <div class="info"><div class="name">固定搭配</div><div class="desc">动词短语·介词搭配·高频考点</div></div>
+        <div class="arrow">&#8250;</div>
+      </div>
+      <div class="module-card" onclick="goTo('page-dictation')">
+        <div class="icon">听</div>
+        <div class="info"><div class="name">听写打卡</div><div class="desc">8词+5搭配+2翻译 · 无限次 · 记错题</div></div>
+        <div class="arrow">&#8250;</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== 语文·易错字词 ====== -->
+<div class="page" id="page-ezwords">
+  <div class="back-btn" onclick="goTo('page-home')">&#8249; 返回首页</div>
+  <div class="page-title">易错字词</div>
+  <div class="page-desc">来源：浙江省近5年中考真题高频字词</div>
+  <div class="filter-tabs">
+    <div class="filter-tab active" data-filter="all" onclick="filterEZ('all')">全部</div>
+    <div class="filter-tab" data-filter="pinyin" onclick="filterEZ('pinyin')">字音</div>
+    <div class="filter-tab" data-filter="shape" onclick="filterEZ('shape')">字形</div>
+    <div class="filter-tab" data-filter="idiom" onclick="filterEZ('idiom')">成语</div>
+  </div>
+  <div id="ezwords-list"></div>
+</div>
+
+<!-- ====== 语文·文言文 ====== -->
+<div class="page" id="page-classical">
+  <div class="back-btn" onclick="goTo('page-home')">&#8249; 返回首页</div>
+  <div class="page-title">文言文</div>
+  <div class="page-desc">课标必背篇目 · 注释·翻译·考点</div>
+  <div id="classical-list"></div>
+</div>
+
+<!-- ====== 语文·作文素材 ====== -->
+<div class="page" id="page-essay">
+  <div class="back-btn" onclick="goTo('page-home')">&#8249; 返回首页</div>
+  <div class="page-title">作文素材积累</div>
+  <div class="page-desc">名言金句 · 典故 · 适用主题</div>
+  <div class="filter-tabs">
+    <div class="filter-tab active" data-filter="all" onclick="filterEssay('all')">全部</div>
+    <div class="filter-tab" data-filter="perseverance" onclick="filterEssay('perseverance')">坚持</div>
+    <div class="filter-tab" data-filter="ideal" onclick="filterEssay('ideal')">理想</div>
+    <div class="filter-tab" data-filter="nature" onclick="filterEssay('nature')">自然</div>
+    <div class="filter-tab" data-filter="life" onclick="filterEssay('life')">人生</div>
+  </div>
+  <div id="essay-list"></div>
+</div>
+
+<!-- ====== 语文·阅读理解 ====== -->
+<div class="page" id="page-reading">
+  <div class="back-btn" onclick="goTo('page-home')">&#8249; 返回首页</div>
+  <div class="page-title">阅读理解技巧</div>
+  <div class="page-desc">各文体答题模板与得分要点</div>
+  <div id="reading-list"></div>
+</div>
+
+<!-- ====== 英语·单词列表 ====== -->
+<div class="page" id="page-wordlist">
+  <div class="back-btn" onclick="goTo('page-home')">&#8249; 返回首页</div>
+  <div class="page-title">单词列表</div>
+  <div class="page-desc">考纲核心词汇 · 释义·搭配·例句·关联词</div>
+  <div id="wordlist-container"></div>
+</div>
+
+<!-- ====== 英语·时态语态 ====== -->
+<div class="page" id="page-tense">
+  <div class="back-btn" onclick="goTo('page-home')">&#8249; 返回首页</div>
+  <div class="page-title">时态语态分析</div>
+  <div class="page-desc">中考八大时态 · 结构·用法·例句</div>
+  <div id="tense-list"></div>
+</div>
+
+<!-- ====== 英语·固定搭配 ====== -->
+<div class="page" id="page-collocation">
+  <div class="back-btn" onclick="goTo('page-home')">&#8249; 返回首页</div>
+  <div class="page-title">固定搭配</div>
+  <div class="page-desc">高频动词短语·介词搭配</div>
+  <div id="collocation-list"></div>
+</div>
+
+<!-- ====== 英语·听写打卡 ====== -->
+<div class="page" id="page-dictation">
+  <div class="back-btn" onclick="goTo('page-home')">&#8249; 返回首页</div>
+  <div class="page-title">听写打卡</div>
+
+  <div id="dict-intro" class="dictation-intro">
+    <div class="big-icon">听</div>
+    <div class="d-title">每日听写</div>
+    <div class="d-desc">8个单词 + 5个固定搭配 + 2个翻译句子</div>
+    <div class="stats">
+      <div class="stat"><div class="num" id="dictDone">0</div><div class="label">已完成</div></div>
+      <div class="stat"><div class="num" id="dictErrors">0</div><div class="label">累计错题</div></div>
+    </div>
+    <div class="btn-row">
+      <button class="btn btn-primary" style="flex:2" onclick="startDictation('all')">开始听写</button>
+      <button class="btn btn-secondary" style="flex:1" onclick="startDictation('errors')">仅错题</button>
+    </div>
+  </div>
+
+  <div id="dict-session" class="dict-session">
+    <div class="dict-progress">
+      <div class="bar"><div class="fill" id="dictBar" style="width:0%"></div></div>
+      <div class="count" id="dictCount">1/15</div>
+    </div>
+    <div id="dict-question-area"></div>
+    <input type="text" class="dict-input" id="dictInput" placeholder="在此输入答案..." autocomplete="off">
+    <div class="dict-result" id="dictResult"></div>
+    <div class="btn-row">
+      <button class="btn btn-primary" id="dictSubmitBtn" style="flex:1" onclick="submitDictAnswer()">提交</button>
+      <button class="btn btn-secondary" id="dictNextBtn" style="flex:1; display:none" onclick="nextDictQuestion()">下一题</button>
+    </div>
+    <div style="margin-top:12px; text-align:center;">
+      <span style="font-size:12px; color:var(--ink-faded); cursor:pointer;" onclick="quitDictation()">退出听写</span>
+    </div>
+  </div>
+</div>
+
+<!-- ====== 错题本 ====== -->
+<div class="page" id="page-errors">
+  <div class="page-title" style="padding-top:16px;">错题本</div>
+  <div class="page-desc">听写中的错题记录 · 可反复练习</div>
+  <div id="error-list"></div>
+</div>
+
+<!-- ====== 底部导航 ====== -->
+<div class="bottom-nav">
+  <div class="nav-item active" onclick="goTo('page-home')">
+    <div class="nav-icon">首</div><div class="nav-label">首页</div>
+  </div>
+  <div class="nav-item" onclick="goTo('page-dictation')">
+    <div class="nav-icon">听</div><div class="nav-label">听写</div>
+  </div>
+  <div class="nav-item" onclick="goTo('page-errors')">
+    <div class="nav-icon">错</div><div class="nav-label">错题本</div>
+  </div>
+</div>
+
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
