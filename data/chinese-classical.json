@@ -1,82 +1,277 @@
 [
   {
-    "title": "桃花源记",
-    "author": "陶渊明（东晋）",
-    "original": "晋太元中，武陵人捕鱼为业。缘溪行，忘路之远近。忽逢桃花林，夹岸数百步，中无杂树，芳草鲜美，落英缤纷。\n\n林尽水源，便得一山，山有小口，仿佛若有光。便舍船，从口入。初极狭，才通人。复行数十步，豁然开朗。",
-    "translation": "东晋太元年间，武陵郡有个人以打鱼为生。他顺着溪水划船，忘记了路程的远近。忽然遇到一片桃花林，生长在溪水两岸，长达几百步，中间没有别的树，花草鲜艳美丽，落花纷纷散在地上。",
-    "keyPoints": [
-      "缘：沿着、顺着",
-      "鲜美：鲜艳美丽（古今异义，今指食物味道好）",
-      "落英：落花",
-      "豁然开朗：由狭窄幽暗突然变得宽阔明亮",
-      "才通人：仅容一个人通过"
+    "category": "一词多义",
+    "char": "顾",
+    "pinyin": "gù",
+    "meanings": [
+      {"meaning": "回头看、看", "example": "顾野有麦场", "source": "《狼》", "note": "屠户回头看野外有麦场"},
+      {"meaning": "拜访", "example": "三顾臣于草庐之中", "source": "《出师表》", "note": "刘备三次到草庐拜访我"},
+      {"meaning": "只是、但是", "example": "顾不如蜀鄙之僧哉", "source": "《为学》", "note": "难道还不如蜀地边远地方的和尚吗"}
     ]
   },
   {
-    "title": "岳阳楼记",
-    "author": "范仲淹（北宋）",
-    "original": "予观夫巴陵胜状，在洞庭一湖。衔远山，吞长江，浩浩汤汤，横无际涯；朝晖夕阴，气象万千。\n\n若夫霪雨霏霏，连月不开，阴风怒号，浊浪排空；日星隐曜，山岳潜形。",
-    "translation": "我看那巴陵郡的美景，全在洞庭湖上。它连接着远山，吞吐着长江，浩浩荡荡，无边无际；早晨阳光明媚，傍晚天色阴沉，气象千变万化。",
-    "keyPoints": [
-      "胜状：美好的景色",
-      "衔：包含、连接",
-      "横无际涯：宽阔无边",
-      "朝晖夕阴：早晨阳光，傍晚阴暗",
-      "霪雨霏霏：连绵的雨繁密"
+    "category": "一词多义",
+    "char": "极",
+    "pinyin": "jí",
+    "meanings": [
+      {"meaning": "到达、极至", "example": "南极潇湘", "source": "《岳阳楼记》", "note": "向南到达潇湘"},
+      {"meaning": "尽头、极点", "example": "此乐何极", "source": "《岳阳楼记》", "note": "这种快乐哪有穷尽"},
+      {"meaning": "非常、极其", "example": "初极狭，才通人", "source": "《桃花源记》", "note": "起初非常狭窄"}
     ]
   },
   {
-    "title": "醉翁亭记",
-    "author": "欧阳修（北宋）",
-    "original": "环滁皆山也。其西南诸峰，林壑尤美，望之蔚然而深秀者，琅琊也。\n\n醉翁之意不在酒，在乎山水之间也。山水之乐，得之心而寓之酒也。",
-    "translation": "滁州四面都是山。西南方的各个山峰，树林和山谷尤其优美，远远望去草木茂盛幽深秀丽的，是琅琊山。",
-    "keyPoints": [
-      "蔚然：茂盛的样子",
-      "醉翁之意不在酒：比喻本意不在此，而在别的方面",
-      "得之心而寓之酒：领会在心里，寄托在酒上",
-      "尤：尤其、特别"
+    "category": "一词多义",
+    "char": "绝",
+    "pinyin": "jué",
+    "meanings": [
+      {"meaning": "隔绝、断绝", "example": "率妻子邑人来此绝境", "source": "《桃花源记》", "note": "与世隔绝的地方"},
+      {"meaning": "极、非常", "example": "奇山异水，天下独绝", "source": "《与朱元思书》", "note": "独一无二到极点"},
+      {"meaning": "停止、消失", "example": "哀转久绝", "source": "《三峡》", "note": "悲哀的回声很久才消失"},
+      {"meaning": "极高", "example": "绝巘多生怪柏", "source": "《三峡》", "note": "极高的山峰"}
     ]
   },
   {
-    "title": "陋室铭",
-    "author": "刘禹锡（唐）",
-    "original": "山不在高，有仙则名。水不在深，有龙则灵。斯是陋室，惟吾德馨。\n\n苔痕上阶绿，草色入帘青。谈笑有鸿儒，往来无白丁。",
-    "translation": "山不在于高，有仙人就出名。水不在于深，有龙就显灵。这是简陋的屋子，只因我的品德好（就不感到简陋了）。",
-    "keyPoints": [
-      "名：出名（名词作动词）",
-      "灵：显灵",
-      "斯：这",
-      "馨：散布很远的香气，这里指品德高尚",
-      "鸿儒：博学的人",
-      "白丁：平民，这里指没有什么学问的人"
+    "category": "一词多义",
+    "char": "走",
+    "pinyin": "zǒu",
+    "meanings": [
+      {"meaning": "跑", "example": "两股战战，几欲先走", "source": "《口技》", "note": "两条腿发抖，几乎想要先跑"},
+      {"meaning": "逃跑", "example": "扁鹊望桓侯而还走", "source": "《扁鹊见蔡桓公》", "note": "扁鹊看见桓侯就转身跑了"}
     ]
   },
   {
-    "title": "爱莲说",
-    "author": "周敦颐（北宋）",
-    "original": "水陆草木之花，可爱者甚蕃。晋陶渊明独爱菊。自李唐来，世人甚爱牡丹。\n\n予独爱莲之出淤泥而不染，濯清涟而不妖，中通外直，不蔓不枝，香远益清，亭亭净植。",
-    "translation": "水上、陆地上各种草本木本的花，值得喜爱的很多。晋代的陶渊明唯独喜爱菊花。从唐代以来，世上的人非常喜爱牡丹。",
-    "keyPoints": [
-      "蕃：多",
-      "独：唯独",
-      "淤泥：河沟里积存的污泥",
-      "染：沾染（污秽）",
-      "濯：洗涤",
-      "妖：美丽而不端庄",
-      "亭亭净植：笔直地洁净地立着"
+    "category": "一词多义",
+    "char": "冠",
+    "pinyin": "guān / guàn",
+    "meanings": [
+      {"meaning": "帽子（名词，guān）", "example": "中峨冠而多髯者为东坡", "source": "《核舟记》", "note": "中间戴着高帽子、留着浓密胡须的是苏东坡"},
+      {"meaning": "戴帽子（动词，guàn）", "example": "冠者五六人", "source": "《论语》", "note": "戴帽子的成年人五六个"},
+      {"meaning": "居第一位（动词，guàn）", "example": "冠绝天下", "source": "课外文言文常见", "note": "天下第一"}
     ]
   },
   {
-    "title": "送东阳马生序（节选）",
-    "author": "宋濂（明）",
-    "original": "余幼时即嗜学。家贫，无从致书以观，每假借于藏书之家，手自笔录，计日以还。\n\n天大寒，砚冰坚，手指不可屈伸，弗之怠。录毕，走送之，不敢稍逾约。",
-    "translation": "我小时候就喜欢读书。家里穷，没有办法买书来读，常常向藏书的人家借，亲手抄录，计算着日子按期归还。",
-    "keyPoints": [
-      "嗜学：喜爱读书",
-      "致：得到",
-      "假借：借",
-      "弗之怠：不放松（抄写）",
-      "逾约：超过约定的期限"
+    "category": "一词多义",
+    "char": "间",
+    "pinyin": "jiān / jiàn",
+    "meanings": [
+      {"meaning": "中间、期间（jiān）", "example": "山间之朝暮也", "source": "《醉翁亭记》", "note": "山中的早晨和傍晚"},
+      {"meaning": "暗中、秘密地（jiàn）", "example": "又间令吴广之次所旁丛祠中", "source": "《陈涉世家》", "note": "又暗中让吴广去驻地旁的丛林神祠中"},
+      {"meaning": "参与（jiàn）", "example": "肉食者谋之，又何间焉", "source": "《曹刿论战》", "note": "当官的谋划这件事，你又何必参与呢"}
+    ]
+  },
+  {
+    "category": "一词多义",
+    "char": "发",
+    "pinyin": "fā",
+    "meanings": [
+      {"meaning": "出发、出发", "example": "忽见千帆隐映，发于海上", "source": "课外文言文", "note": "从海上出发"},
+      {"meaning": "发射、射出", "example": "见其发矢十中八九", "source": "《卖油翁》", "note": "看到他射箭十中八九"},
+      {"meaning": "发送、派出", "example": "发闾左谪戍渔阳", "source": "《陈涉世家》", "note": "征发贫苦百姓去驻守渔阳"},
+      {"meaning": "开放、开", "example": "野芳发而幽香", "source": "《醉翁亭记》", "note": "野花开放散发幽香"}
+    ]
+  },
+  {
+    "category": "一词多义",
+    "char": "信",
+    "pinyin": "xìn / shēn",
+    "meanings": [
+      {"meaning": "诚实、真实", "example": "与朋友交而不信乎", "source": "《论语》", "note": "和朋友交往是否诚实了"},
+      {"meaning": "相信、信任", "example": "忌不自信", "source": "《邹忌讽齐王纳谏》", "note": "邹忌不相信自己（比他们美）"},
+      {"meaning": "信用", "example": "小信未孚", "source": "《曹刿论战》", "note": "小信用不能使神灵信服"},
+      {"meaning": "通'伸'，伸展（shēn）", "example": "欲信大义于天下", "source": "《隆中对》", "note": "想在天下伸张大义"}
+    ]
+  },
+  {
+    "category": "词类活用",
+    "char": "洞",
+    "pinyin": "dòng",
+    "type": "名词作动词",
+    "meanings": [
+      {"meaning": "打洞（本义为洞穴）", "example": "一狼洞其中", "source": "《狼》", "note": "一只狼在其中打洞"}
+    ]
+  },
+  {
+    "category": "词类活用",
+    "char": "箕畚",
+    "pinyin": "jī běn",
+    "type": "名词作状语",
+    "meanings": [
+      {"meaning": "用箕畚装（本义为土筐）", "example": "箕畚运于渤海之尾", "source": "《愚公移山》", "note": "用土筐装着运到渤海边上"}
+    ]
+  },
+  {
+    "category": "词类活用",
+    "char": "泉",
+    "pinyin": "quán",
+    "type": "名词作动词",
+    "meanings": [
+      {"meaning": "泉水（从眼眶）涌出", "example": "泉水激石", "source": "《与朱元思书》", "note": "本义为泉水，此处指泉水冲击石头"}
+    ]
+  },
+  {
+    "category": "使动用法",
+    "char": "闻",
+    "pinyin": "wén",
+    "type": "使……听到",
+    "meanings": [
+      {"meaning": "使……听到", "example": "闻之于寡人者", "source": "《邹忌讽齐王纳谏》", "note": "使寡人听到这件事"}
+    ]
+  },
+  {
+    "category": "使动用法",
+    "char": "广",
+    "pinyin": "guǎng",
+    "type": "使……扩大",
+    "meanings": [
+      {"meaning": "使……扩大", "example": "不宜妄自菲薄……以光先帝遗德", "source": "《出师表》", "note": "（'光'也是使动）使先帝遗德发扬光大"}
+    ]
+  },
+  {
+    "category": "使动用法",
+    "char": "乱",
+    "pinyin": "luàn",
+    "type": "使……扰乱",
+    "meanings": [
+      {"meaning": "使……扰乱", "example": "无丝竹之乱耳", "source": "《陋室铭》", "note": "没有世俗的乐曲来扰乱耳朵"}
+    ]
+  },
+  {
+    "category": "使动用法",
+    "char": "劳",
+    "pinyin": "láo",
+    "type": "使……劳累",
+    "meanings": [
+      {"meaning": "使……劳累", "example": "必先苦其心志，劳其筋骨", "source": "《孟子》", "note": "一定要先使他的心志受苦，使他的筋骨劳累"}
+    ]
+  },
+  {
+    "category": "使动用法",
+    "char": "生",
+    "pinyin": "shēng",
+    "type": "使……生存",
+    "meanings": [
+      {"meaning": "使……活下去", "example": "君将哀而生之乎", "source": "《捕蛇者说》", "note": "您要可怜我使我活下去吗"}
+    ]
+  },
+  {
+    "category": "意动用法",
+    "char": "异",
+    "pinyin": "yì",
+    "type": "认为……奇异",
+    "meanings": [
+      {"meaning": "认为……奇异", "example": "渔人甚异之", "source": "《桃花源记》", "note": "渔人认为这景色非常奇异"}
+    ]
+  },
+  {
+    "category": "意动用法",
+    "char": "利",
+    "pinyin": "lì",
+    "type": "以……为利",
+    "meanings": [
+      {"meaning": "以……为利", "example": "父利其然也", "source": "《伤仲永》", "note": "他的父亲认为这样有利可图"}
+    ]
+  },
+  {
+    "category": "意动用法",
+    "char": "奇",
+    "pinyin": "qí",
+    "type": "认为……奇特",
+    "meanings": [
+      {"meaning": "认为……奇特", "example": "明人胡宗宪奇之", "source": "课外文言文", "note": "明朝人胡宗宪认为他奇特"}
+    ]
+  },
+  {
+    "category": "古今异义",
+    "char": "妻子",
+    "pinyin": "qī zǐ",
+    "meanings": [
+      {"meaning": "古义：妻子和儿女", "example": "率妻子邑人来此绝境", "source": "《桃花源记》", "note": ""},
+      {"meaning": "今义：男子的配偶", "example": "", "source": "", "note": ""}
+    ]
+  },
+  {
+    "category": "古今异义",
+    "char": "鲜美",
+    "pinyin": "xiān měi",
+    "meanings": [
+      {"meaning": "古义：鲜艳美丽", "example": "芳草鲜美", "source": "《桃花源记》", "note": "花草鲜艳美丽"},
+      {"meaning": "今义：食物味道好", "example": "", "source": "", "note": ""}
+    ]
+  },
+  {
+    "category": "古今异义",
+    "char": "交通",
+    "pinyin": "jiāo tōng",
+    "meanings": [
+      {"meaning": "古义：交错相通", "example": "阡陌交通", "source": "《桃花源记》", "note": "田间小路交错相通"},
+      {"meaning": "今义：运输和邮电事业的总称", "example": "", "source": "", "note": ""}
+    ]
+  },
+  {
+    "category": "古今异义",
+    "char": "绝境",
+    "pinyin": "jué jìng",
+    "meanings": [
+      {"meaning": "古义：与世隔绝的地方", "example": "率妻子邑人来此绝境", "source": "《桃花源记》", "note": ""},
+      {"meaning": "今义：没有出路的境地", "example": "", "source": "", "note": ""}
+    ]
+  },
+  {
+    "category": "古今异义",
+    "char": "烈士",
+    "pinyin": "liè shì",
+    "meanings": [
+      {"meaning": "古义：有志向有抱负的人", "example": "烈士暮年，壮心不已", "source": "《龟虽寿》", "note": "有抱负的人到了晚年，雄心依然不止"},
+      {"meaning": "今义：为正义事业牺牲的人", "example": "", "source": "", "note": ""}
+    ]
+  },
+  {
+    "category": "古今异义",
+    "char": "中间",
+    "pinyin": "zhōng jiàn",
+    "meanings": [
+      {"meaning": "古义：中间夹杂着", "example": "中间力拉崩倒之声", "source": "《口技》", "note": "中间夹杂着房屋倒塌的声音"},
+      {"meaning": "今义：当中、中心", "example": "", "source": "", "note": ""}
+    ]
+  },
+  {
+    "category": "通假字",
+    "char": "要",
+    "pinyin": "yào",
+    "meanings": [
+      {"meaning": "通'邀'，邀请", "example": "便要还家", "source": "《桃花源记》", "note": "就邀请他回家"}
+    ]
+  },
+  {
+    "category": "通假字",
+    "char": "畔",
+    "pinyin": "pàn",
+    "meanings": [
+      {"meaning": "通'叛'，背叛", "example": "寡助之至，亲戚畔之", "source": "《孟子》", "note": "帮助的人少到极点，连亲属都会背叛他"}
+    ]
+  },
+  {
+    "category": "通假字",
+    "char": "具",
+    "pinyin": "jù",
+    "meanings": [
+      {"meaning": "通'俱'，全、详细", "example": "政通人和，百废具兴", "source": "《岳阳楼记》", "note": "各种荒废的事业全都兴办起来"}
+    ]
+  },
+  {
+    "category": "通假字",
+    "char": "扳",
+    "pinyin": "pān",
+    "meanings": [
+      {"meaning": "通'攀'，拉着", "example": "日扳仲永环谒于邑人", "source": "《伤仲永》", "note": "每天拉着仲永四处拜访同乡人"}
+    ]
+  },
+  {
+    "category": "通假字",
+    "char": "不",
+    "pinyin": "fǒu",
+    "meanings": [
+      {"meaning": "通'否'，不、不是", "example": "客问元方：'尊君在不？'", "source": "《陈太丘与友期行》", "note": "客人问元方：你父亲在不在？"}
     ]
   }
 ]

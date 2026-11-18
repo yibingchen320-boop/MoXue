@@ -303,3 +303,231 @@ body::before {
 
 .spacer-12 { height:12px; }
 .spacer-20 { height:20px; }
+
+/* === Refresh 按钮 === */
+.refresh-bar { display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; }
+.refresh-btn {
+  display:inline-flex; align-items:center; gap:4px;
+  padding:4px 12px; font-size:12px;
+  border:1px solid var(--line); border-radius:14px;
+  background:var(--paper-light); color:var(--ink-light);
+  cursor:pointer; transition:all 0.2s;
+}
+.refresh-btn:active { background:var(--paper-dark); color:var(--ink); }
+.refresh-btn .icon { font-size:14px; }
+.count-label { font-size:12px; color:var(--ink-faded); }
+
+/* === 文言文字词积累 === */
+.classical-word-card {
+  background:var(--paper-light);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:14px 16px;
+  margin-bottom:10px;
+}
+.classical-word-card .cw-head {
+  display:flex; align-items:center; gap:8px;
+  margin-bottom:8px;
+}
+.classical-word-card .cw-char {
+  font-family:'Noto Serif SC', serif;
+  font-size:22px; font-weight:700; color:var(--ink);
+}
+.classical-word-card .cw-pinyin {
+  font-family:'Crimson Pro', serif;
+  font-size:14px; color:var(--ink-faded);
+}
+.classical-word-card .cw-cat {
+  font-size:10px; padding:1px 8px; border-radius:10px;
+  background:var(--paper-dark); color:var(--ink-light);
+}
+.classical-word-card .cw-type {
+  font-size:11px; color:var(--accent); margin-bottom:6px; font-weight:600;
+}
+.classical-word-card .cw-meaning {
+  font-size:13px; color:var(--ink); line-height:1.6;
+  padding:6px 0; border-bottom:1px dashed var(--line);
+  margin-bottom:4px;
+}
+.classical-word-card .cw-meaning:last-child { border-bottom:none; }
+.classical-word-card .cw-example {
+  font-family:'Noto Serif SC', serif;
+  font-size:13px; color:var(--ink); margin:2px 0;
+}
+.classical-word-card .cw-note {
+  font-size:12px; color:var(--ink-faded); line-height:1.5;
+}
+.classical-word-card .cw-source {
+  font-size:11px; color:var(--ink-faded); margin-top:2px;
+}
+
+/* === 作文素材（随笔式） === */
+.essay-passage-card {
+  background:var(--paper-light);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:18px 16px;
+  margin-bottom:14px;
+}
+.essay-passage-card .ep-cat {
+  font-size:11px; color:var(--ink-faded);
+  border:1px solid var(--line); padding:1px 8px;
+  border-radius:10px; display:inline-block; margin-bottom:8px;
+}
+.essay-passage-card .ep-title {
+  font-family:'Noto Serif SC', serif;
+  font-size:16px; font-weight:700; color:var(--ink);
+  margin-bottom:10px;
+}
+.essay-passage-card .ep-content {
+  font-family:'Noto Serif SC', serif;
+  font-size:14px; line-height:2; color:var(--ink);
+  text-align:justify;
+}
+
+/* === 阅读理解练习 === */
+.reading-exercise-card {
+  background:var(--paper-light);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:16px 18px;
+  margin-bottom:14px;
+}
+.reading-exercise-card .re-type {
+  font-size:11px; color:var(--ink-faded);
+  border:1px solid var(--line); padding:1px 8px;
+  border-radius:10px; display:inline-block; margin-bottom:6px;
+}
+.reading-exercise-card .re-title {
+  font-family:'Noto Serif SC', serif;
+  font-size:15px; font-weight:700; margin-bottom:8px;
+}
+.reading-exercise-card .re-method {
+  font-size:12px; color:var(--ink-light); line-height:1.6;
+  background:var(--paper-dark); border-radius:6px;
+  padding:8px 12px; margin-bottom:10px;
+}
+.reading-exercise-card .re-method .label { font-weight:600; color:var(--ink); }
+.reading-exercise-card .re-passage {
+  font-family:'Noto Serif SC', serif;
+  font-size:13px; line-height:1.8; color:var(--ink);
+  padding:8px 0; border-top:1px dashed var(--line);
+  margin-bottom:8px;
+}
+.reading-exercise-card .re-passage .src { font-size:11px; color:var(--ink-faded); }
+.reading-exercise-card .re-question {
+  font-size:14px; color:var(--ink); font-weight:500;
+  margin-bottom:8px;
+}
+.reading-exercise-card .re-answer {
+  font-size:13px; color:var(--correct); line-height:1.7;
+  border-top:1px dashed var(--line); padding-top:8px;
+  margin-bottom:8px;
+}
+.reading-exercise-card .re-answer .label { font-weight:600; }
+.reading-exercise-card .re-analysis {
+  font-size:12px; color:var(--ink-light); line-height:1.6;
+  border-top:1px dashed var(--line); padding-top:8px;
+}
+.reading-exercise-card .re-analysis .label { font-weight:600; color:var(--ink); }
+.reading-exercise-card .re-template {
+  font-size:12px; color:var(--accent); line-height:1.5;
+  margin-top:6px; font-style:italic;
+}
+
+/* === 固定搭配（打勾交互） === */
+.coll-check-item {
+  background:var(--paper-light);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:12px 16px;
+  margin-bottom:8px;
+  display:flex; align-items:flex-start; gap:10px;
+  transition: all 0.3s;
+}
+.coll-check-item.checked {
+  opacity:0.35;
+  border-color:var(--paper-dark);
+}
+.coll-check-item .coll-check {
+  width:22px; height:22px; flex-shrink:0;
+  border:1.5px solid var(--line); border-radius:4px;
+  cursor:pointer; display:flex; align-items:center; justify-content:center;
+  font-size:14px; color:var(--correct); transition:all 0.2s;
+  margin-top:2px;
+}
+.coll-check-item.checked .coll-check {
+  background:var(--correct); border-color:var(--correct);
+  color:var(--paper);
+}
+.coll-check-item .coll-content { flex:1; }
+.coll-check-item .coll-phrase {
+  font-family:'Crimson Pro', serif;
+  font-size:16px; font-weight:600; color:var(--ink);
+  margin-bottom:2px;
+}
+.coll-check-item .coll-meaning { font-size:13px; color:var(--ink-light); margin-bottom:4px; }
+.coll-check-item .coll-example {
+  font-family:'Crimson Pro', serif;
+  font-size:12px; color:var(--ink-faded); font-style:italic;
+}
+
+/* === 听写预览模式 === */
+.dict-preview {
+  background:var(--paper-light);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:20px 16px;
+  margin-bottom:16px;
+}
+.dict-preview .dp-title {
+  font-family:'Noto Serif SC', serif;
+  font-size:16px; font-weight:700;
+  text-align:center; margin-bottom:6px;
+}
+.dict-preview .dp-sub {
+  font-size:12px; color:var(--ink-faded);
+  text-align:center; margin-bottom:16px;
+}
+.dict-preview .dp-card {
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:16px;
+  margin-bottom:10px;
+  display:flex; align-items:center; gap:12px;
+}
+.dict-preview .dp-card .dp-en {
+  font-family:'Crimson Pro', serif;
+  font-size:20px; font-weight:600; color:var(--ink);
+  flex:1;
+}
+.dict-preview .dp-card .dp-cn {
+  font-size:14px; color:var(--ink-light);
+  flex:1; text-align:right;
+}
+.dict-preview .dp-card .dp-speak {
+  font-size:20px; cursor:pointer;
+  color:var(--ink-faded); flex-shrink:0;
+}
+.dict-preview .dp-card .dp-speak:active { color:var(--ink); }
+
+/* === 听写中的发音按钮 === */
+.dict-speak-btn {
+  font-size:24px; cursor:pointer;
+  color:var(--ink-light); margin-bottom:8px;
+  display:inline-block;
+}
+.dict-speak-btn:active { color:var(--ink); }
+
+/* === 分类标签（文言文） === */
+.cat-tabs {
+  display:flex; gap:6px; margin-bottom:14px; flex-wrap:wrap;
+}
+.cat-tab {
+  padding:4px 12px; font-size:12px;
+  border:1px solid var(--line); border-radius:14px;
+  color:var(--ink-faded); cursor:pointer;
+  background:var(--paper-light);
+}
+.cat-tab.active { background:var(--ink); color:var(--paper); border-color:var(--ink); }

@@ -53,17 +53,17 @@
       </div>
       <div class="module-card" onclick="goTo('page-classical')">
         <div class="icon">文</div>
-        <div class="info"><div class="name">文言文</div><div class="desc">课内必背篇目 · 注释 · 翻译</div></div>
+        <div class="info"><div class="name">文言文字词积累</div><div class="desc">一词多义·词类活用·使动意动·古今异义·通假字</div></div>
         <div class="arrow">&#8250;</div>
       </div>
       <div class="module-card" onclick="goTo('page-essay')">
         <div class="icon">材</div>
-        <div class="info"><div class="name">作文素材积累</div><div class="desc">名言金句 · 典故 · 适用主题</div></div>
+        <div class="info"><div class="name">作文素材积累</div><div class="desc">随笔式素材·人物故事·哲理思辨·文化自信</div></div>
         <div class="arrow">&#8250;</div>
       </div>
       <div class="module-card" onclick="goTo('page-reading')">
         <div class="icon">阅</div>
-        <div class="info"><div class="name">阅读理解技巧</div><div class="desc">记叙文·说明文·议论文答题模板</div></div>
+        <div class="info"><div class="name">阅读理解</div><div class="desc">真题练习·答题方法·圈画技巧·解析指导</div></div>
         <div class="arrow">&#8250;</div>
       </div>
     </div>
@@ -98,35 +98,53 @@
 <div class="page" id="page-ezwords">
   <div class="back-btn" onclick="goTo('page-home')">&#8249; 返回首页</div>
   <div class="page-title">易错字词</div>
-  <div class="page-desc">来源：浙江省近5年中考真题高频字词</div>
+  <div class="page-desc">字音·字形·成语辨析 · 浙江真题高频 + 常见易错</div>
   <div class="filter-tabs">
     <div class="filter-tab active" data-filter="all" onclick="filterEZ('all')">全部</div>
     <div class="filter-tab" data-filter="pinyin" onclick="filterEZ('pinyin')">字音</div>
     <div class="filter-tab" data-filter="shape" onclick="filterEZ('shape')">字形</div>
     <div class="filter-tab" data-filter="idiom" onclick="filterEZ('idiom')">成语</div>
   </div>
+  <div class="refresh-bar">
+    <span class="count-label" id="ezwords-count"></span>
+    <div class="refresh-btn" onclick="renderEZWords(ezCurrentFilter)"><span class="icon">&#8635;</span> 换一批</div>
+  </div>
   <div id="ezwords-list"></div>
 </div>
 
-<!-- ====== 语文·文言文 ====== -->
+<!-- ====== 语文·文言文字词积累 ====== -->
 <div class="page" id="page-classical">
   <div class="back-btn" onclick="goTo('page-home')">&#8249; 返回首页</div>
-  <div class="page-title">文言文</div>
-  <div class="page-desc">课标必背篇目 · 注释·翻译·考点</div>
+  <div class="page-title">文言文字词积累</div>
+  <div class="page-desc">课外文言文 · 一词多义·词类活用·使动意动·古今异义·通假字</div>
+  <div class="cat-tabs">
+    <div class="cat-tab active" data-cat="all" onclick="filterClassical('all')">全部</div>
+    <div class="cat-tab" data-cat="一词多义" onclick="filterClassical('一词多义')">一词多义</div>
+    <div class="cat-tab" data-cat="词类活用" onclick="filterClassical('词类活用')">词类活用</div>
+    <div class="cat-tab" data-cat="使动用法" onclick="filterClassical('使动用法')">使动用法</div>
+    <div class="cat-tab" data-cat="意动用法" onclick="filterClassical('意动用法')">意动用法</div>
+    <div class="cat-tab" data-cat="古今异义" onclick="filterClassical('古今异义')">古今异义</div>
+    <div class="cat-tab" data-cat="通假字" onclick="filterClassical('通假字')">通假字</div>
+  </div>
+  <div class="refresh-bar">
+    <span class="count-label" id="classical-count"></span>
+    <div class="refresh-btn" onclick="renderClassical(classicalCurrentCat)"><span class="icon">&#8635;</span> 换一批</div>
+  </div>
   <div id="classical-list"></div>
 </div>
 
-<!-- ====== 语文·作文素材 ====== -->
+<!-- ====== 语文·作文素材积累 ====== -->
 <div class="page" id="page-essay">
   <div class="back-btn" onclick="goTo('page-home')">&#8249; 返回首页</div>
   <div class="page-title">作文素材积累</div>
-  <div class="page-desc">名言金句 · 典故 · 适用主题</div>
+  <div class="page-desc">随笔式素材 · 人物故事·哲理思辨·文化自信·小人物·文学感悟</div>
   <div class="filter-tabs">
     <div class="filter-tab active" data-filter="all" onclick="filterEssay('all')">全部</div>
-    <div class="filter-tab" data-filter="perseverance" onclick="filterEssay('perseverance')">坚持</div>
-    <div class="filter-tab" data-filter="ideal" onclick="filterEssay('ideal')">理想</div>
-    <div class="filter-tab" data-filter="nature" onclick="filterEssay('nature')">自然</div>
-    <div class="filter-tab" data-filter="life" onclick="filterEssay('life')">人生</div>
+    <div class="filter-tab" data-filter="哲理思辨" onclick="filterEssay('哲理思辨')">哲理思辨</div>
+    <div class="filter-tab" data-filter="人物故事" onclick="filterEssay('人物故事')">人物故事</div>
+    <div class="filter-tab" data-filter="文化自信" onclick="filterEssay('文化自信')">文化自信</div>
+    <div class="filter-tab" data-filter="小人物" onclick="filterEssay('小人物')">小人物</div>
+    <div class="filter-tab" data-filter="文学感悟" onclick="filterEssay('文学感悟')">文学感悟</div>
   </div>
   <div id="essay-list"></div>
 </div>
@@ -134,8 +152,8 @@
 <!-- ====== 语文·阅读理解 ====== -->
 <div class="page" id="page-reading">
   <div class="back-btn" onclick="goTo('page-home')">&#8249; 返回首页</div>
-  <div class="page-title">阅读理解技巧</div>
-  <div class="page-desc">各文体答题模板与得分要点</div>
+  <div class="page-title">阅读理解</div>
+  <div class="page-desc">真题练习 · 答题方法 · 圈画技巧 · 解析指导</div>
   <div id="reading-list"></div>
 </div>
 
@@ -179,6 +197,16 @@
     <div class="btn-row">
       <button class="btn btn-primary" style="flex:2" onclick="startDictation('all')">开始听写</button>
       <button class="btn btn-secondary" style="flex:1" onclick="startDictation('errors')">仅错题</button>
+    </div>
+  </div>
+
+  <div id="dict-preview" class="dict-preview" style="display:none">
+    <div class="dp-title">先过一遍中英文</div>
+    <div class="dp-sub">认熟后再开始听写 · 点击喇叭可听发音</div>
+    <div id="dict-preview-cards"></div>
+    <div class="btn-row" style="margin-top:16px">
+      <button class="btn btn-secondary" style="flex:1" onclick="quitDictation()">返回</button>
+      <button class="btn btn-primary" style="flex:2" onclick="startDictTest()">开始听写</button>
     </div>
   </div>
 
